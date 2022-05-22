@@ -123,7 +123,8 @@ Thanks developers:
 added 339 packages from 262 contributors
 
 
-* Configuring gekko on a webserver [nginx]()
+* Configuring gekko 
+* webserver [nginx]()
 
 ##### Crypto Icons
 
