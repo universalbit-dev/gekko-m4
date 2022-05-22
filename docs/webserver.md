@@ -1,3 +1,4 @@
+```
 server {
 listen 80;
 listen [::]:80;
@@ -34,7 +35,10 @@ location / {
         proxy_send_timeout 86400s;
 }
 }
+```
 
 To create a self signed certificate:
+```
 sudo mkdir /etc/nginx/ssl
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+```
