@@ -78,7 +78,7 @@ SOFTWARE.
 ##### node_modules 
 
 huge work behind a simple install command
-to report license incompatibility visit the [web](https://) page and send a message
+to report license incompatibility [issue](https://github.com/universalbit-dev/gekko-m4/issues)
 
 -----
 
