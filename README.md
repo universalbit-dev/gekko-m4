@@ -122,7 +122,7 @@ added 339 packages from 262 contributors
 
 
 * Configuring Gekko-M4 
-* webserver [nginx](https://universalbit.it:3000/universalbit-blockchain/Gekko-M4/src/master/docs/webserver.md)
+* webserver [nginx](https://github.com/universalbit-dev/gekko-m4/blob/master/docs/webserver.md)
 
 ##### Crypto Icons
 
