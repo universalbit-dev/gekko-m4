@@ -71,10 +71,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ```
 
+##### Installation NodeJs version 12
 
-#####
 ```
-nvm use 12
+nvm install 12
 
 ```
 
@@ -119,10 +119,15 @@ npm i sqlite3 --save
 Thanks developers:
 added 339 packages from 262 contributors
 
+##### Some note: a working example
 
 
-* Configuring Gekko-M4 
-* webserver [nginx](https://github.com/universalbit-dev/gekko-m4/blob/master/docs/webserver.md)
+* Webserver [Nginx](https://universalbit.it:3000/universalbit-blockchain/Gekko-M4/src/master/docs/webserver.md)
+
+* Configure[IP]()
+
+* Exchange:[API]()
+* First Run:  [UI Mode]()
 
 ##### Crypto Icons
 
@@ -173,16 +178,6 @@ This strategy intended as "low freq trade", essentially do nothing in down trend
 
 ##### Offline Documentation: [doc](https://universalbit.it/blockchain/shared-files/1093/docs.tar.gz)
 
-
-Gekko Support Multiple Exchange,Watchers and PaperTrader mode.
-Backtest simulate and debug your strategy.
-
-Exchange	
-
-* BitFinex
-* Kraken
-* Poloniex
-* Exmo         
 
 On the crypto road : probably not necessary but the project looks interesting
 ccxt-js library: a JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs. [ccxt](https://readthedocs.org/projects/ccxt/)
