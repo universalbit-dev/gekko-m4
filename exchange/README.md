@@ -2,12 +2,15 @@
 
 ##### install available exchanges
 
+Exchange node_modules:
 ```
 npm i --build-from-source
 
 ```
-
-difficult installation: consider using this modules: [exchange node modules](https://universalbit.it:3000/universalbit-blockchain/Gekko-M4/src/master/exchange/node_modules.tar.gz)
+Sqlite3 Database:
+```
+npm i sqlite3 --save
+```
 
 Thanks developers: added 339 packages from 262 contributors
 
