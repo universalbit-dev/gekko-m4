@@ -57,7 +57,11 @@ Donation Address : LTC LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt
 
 
 Gekko-M4
-introduction
+
+
+[introduction](https://universalbit.it/blockchain/gekko-m4/)
+
+
 
 NodeJs
 
@@ -75,56 +79,50 @@ nvm use 12
 ```
 
 Gekko-M4
-clone or download project and start learn
+clone project and start learn
 
 ```
 git clone https://universalbit.it:3000/universalbit-blockchain/Gekko-M4.git
 
 ```
 
-
-pre-install modules Node-Pre-Gyp:
+Install Node-Gyp :
 ```
-npm i @mapbox/node-pre-gyp -g
-
-```
+npm i node-gyp -g
 
 
-
-
-NPM
+Gekko-M4 node_modules:
 ```
 npm i --build-from-source
 
 ```
 
-difficult installation:
-consider using this modules : [node_modules](https://universalbit.it/blockchain/shared-files/1098/node_modules.tar-1.gz)
+Indicators and Database:
 
+```
+npm i tulind --save
+npm i sqlite3 --save
+
+```
 Thanks developers:
 added 1873 packages from 1324 contributors
 
 
-exchange directory:
-```
-cd exchange
 
-```
+exchange directory: /exchange
 
-install available exchanges
 ```
 npm i --build-from-source
+npm i sqlite3 --save
 
 ```
-difficult installation:
-consider using this modules:[exchange node modules](https://universalbit.it/blockchain/shared-files/1097/exchange_node_modules.tar.gz)
-
 Thanks developers:
 added 339 packages from 262 contributors
 
 
-* Configuring gekko 
-* webserver [nginx](https://github.com/universalbit-dev/gekko-m4/blob/master/docs/webserver.md)
+
+* Configuring Gekko-M4 
+* webserver [nginx](https://universalbit.it:3000/universalbit-blockchain/Gekko-M4/src/master/docs/webserver.md)
 
 ##### Crypto Icons
 
