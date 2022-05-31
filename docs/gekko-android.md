@@ -85,7 +85,7 @@ Thanks developers,required node modules are ready.
 
 
 * Webserver 
-[lWS LighWeight Web Server]
+[LighWeight Web Server]
 (https://f-droid.org/packages/net.basov.lws.fdroid)
 
 [Setup]()
@@ -99,8 +99,8 @@ Register and Add Api Keys
 
 
 * Setup Configuration Files and Plugins:
-configuration [file]() 
-base configuration [file]()
+configuration [file](https://github.com/universalbit-dev/gekko-m4/blob/master/config.js)
+base configuration [file](https://github.com/universalbit-dev/gekko-m4/blob/master/web/baseUIconfig.js)
 
 configure application via toml language [/config directory]
 enable or disable plugins: [config/plugins directory]
