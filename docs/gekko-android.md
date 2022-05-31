@@ -84,7 +84,8 @@ Thanks developers,required node modules are ready.
 ##### Some note: a working example
 
 
-* Webserver [lWS LighWeight Web Server](lWS (lightweight Web Server (lWS))
+* Webserver 
+[lWS LighWeight Web Server](lWS (lightweight Web Server
 https://f-droid.org/packages/net.basov.lws.fdroid)
 
 [Setup]()
