@@ -84,9 +84,7 @@ Thanks developers,required node modules are ready.
 ##### Some note: a working example
 
 
-* Webserver 
-[LighWeight Web Server]
-(https://f-droid.org/packages/net.basov.lws.fdroid)
+* Webserver Nginx
 
 [Setup]()
 
