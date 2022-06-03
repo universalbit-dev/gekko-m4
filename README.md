@@ -16,8 +16,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 Gekko-M4 The MIT License (MIT) Copyright (c) 2022 UniversalBit Blockchain This Software unlike easy gains
+
 #### Targets:
 improve graphic and correct some errors, enhance the application by solving some vulnerabilities.
+
+
+##### [Quasar](https://v0-16.quasar-framework.org/)
+* graphic components to be updated and improved.
+
+##### [Nodejs 12](https://nodejs.org/docs/latest-v12.x/api/)
+* update and bug fixes
+
+-----
 
 
 ##### it is not possible to obtain easy earnings
@@ -131,8 +141,7 @@ Thanks developers.
 
 MODE:
 
-##### | Watcher     | PaperTrade     | BackTest     | Realtime
-
+##### |  Watcher  |  PaperTrade  |  BackTest  |  Realtime  |  Importer  | 
 
 *[First Run]()
 
@@ -140,6 +149,7 @@ MODE:
 node gekko -c config.js --ui
 ```
 *[Terminal Mode with DEBUG Messages]()
+
 ```
 node gekko -c config.js
 ```
