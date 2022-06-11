@@ -15,11 +15,12 @@ UPDATE:
 Add pingPong for sideways market(Rafael Martín)
 
 (CC-BY-SA 4.0) UniversalBit Blockchain
-RSI_BULL_BEAR_ADX_PINGPONG_INVERTER
+INVERTER
 https://creativecommons.org/licenses/by-sa/4.0/
 Update:
 - Switch
-- Inverter  DEMA && SMA
+- Inverter 
+- Indicators DEMA && SMA
 */
 var log = require('../core/log.js');
 var config = require('../core/util.js').getConfig();
@@ -68,40 +69,40 @@ this.Min_Loss_Percent = this.settings.Min_Loss_Percent;
 this.Min_Gain_Percent = this.settings.Min_Gain_Percent;
 //Debug
 this.startTime = new Date();
-		if( this.debug ){
-		this.stat = {
-	  adx: { min: 1000, max: 0 },
-		bear: { min: 1000, max: 0 },
-		bull: { min: 1000, max: 0 }};
-		}
+if( this.debug ){
+this.stat = {
+adx: { min: 1000, max: 0 },
+bear: { min: 1000, max: 0 },
+bull: { min: 1000, max: 0 }};
+}
 //Messages
-		log.info("==========================================");
-		log.info('Running', this.name);
-		log.info('==========================================');
-	},
+log.info("==========================================");
+log.info('Running', this.name);
+log.info('==========================================');
+},
 //Reset Trend
-	  resetTrend: function()
-	  {
-		  let trend = {
-			duration: 0,
-			direction: 'none',
-			longPos: 0,
-			pingPong : {gainsPercentage: this.settings.PINGPONG_GAINS_PERCENTAGE }
-		};
-	this.trend = trend;
+resetTrend: function()
+{
+let trend = {
+	duration: 0,
+	direction: 'none',
+	longPos: 0,
+	pingPong : {gainsPercentage: this.settings.PINGPONG_GAINS_PERCENTAGE }
+	};
+this.trend = trend;
 //Log Trend
-	console.log(this.trend);
+console.log(this.trend);
 	},
 //Low/High backtest-period
-	lowHigh: function(val,type)
-	{
-    let cur = this.stat.bear;
-	if( type == 'bear' )
-	{
+lowHigh: function(val,type)
+{
+let cur = this.stat.bear;
+if( type == 'bear' )
+{
 	cur = this.stat.bear;
 	if( val < cur.min ) this.stat.bear.min = val;
 	else if( val > cur.max ) this.stat.bear.max = val;
-	}
+}
 
 	else if( type == 'bull' )
 	{
@@ -133,29 +134,29 @@ switch (this.candle.close) {
 	break;
 }
 //Bear
-	if((longDEMA < shortDEMA) && (maFast < maSlow))
+if((longDEMA < shortDEMA) && (maFast < maSlow))
 {
 	rsi = ind.BEAR_RSI.result.result;
 	let rsi_hi = this.settings.BEAR_RSI_high,rsi_low = this.settings.BEAR_RSI_low;
 // Adx
-	if( adx > this.settings.ADX_high ) rsi_hi = rsi_hi + this.BEAR_MOD_high;
+if( adx > this.settings.ADX_high ) rsi_hi = rsi_hi + this.BEAR_MOD_high;
 	 else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BEAR_MOD_low;
 
-	if( rsi > rsi_hi ) this.short();
-	 else if( rsi < rsi_low ) this.long();
-	 else this.pingPong();
+if( rsi > rsi_hi ) this.short();
+	else if( rsi < rsi_low ) this.long();
+	else this.pingPong();
 	if(this.debug) this.lowHigh( rsi, 'bear' );
 }
 //Bull
-  else
+else
 {
 	rsi = ind.BULL_RSI.result.result;
 	let rsi_hi = this.settings.BULL_RSI_high,rsi_low = this.settings.BULL_RSI_low;
 // Adx
-	if( adx > this.settings.ADX_high ) rsi_hi = rsi_hi + this.BULL_MOD_high;
-	 else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BULL_MOD_low;
+if( adx > this.settings.ADX_high ) rsi_hi = rsi_hi + this.BULL_MOD_high;
+	else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BULL_MOD_low;
 
-	if( rsi > rsi_hi ) this.short();
+if( rsi > rsi_hi ) this.short();
 	else if( rsi < rsi_low ) this.long();
 	else this.pingPong();
 
@@ -201,7 +202,7 @@ switch (this.candle.close) {
 	{
 	this.resetTrend();
 	this.trend.direction = 'down';
-  this.trend.longPos = false;
+        this.trend.longPos = false;
 	this.advice('short');
 	if( this.debug ) log.info('Going short');
 	}
