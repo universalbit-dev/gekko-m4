@@ -142,7 +142,7 @@ switch (this.candle.close) {
 	 else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BEAR_MOD_low;
 
 	if( rsi > rsi_hi ) this.short();
-	 else if( rsi < rsi_low ) this.long()
+	 else if( rsi < rsi_low ) this.long();
 	 else this.pingPong();
 	if(this.debug) this.lowHigh( rsi, 'bear' );
 }
