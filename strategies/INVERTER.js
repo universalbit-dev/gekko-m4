@@ -198,7 +198,7 @@ if( rsi > rsi_hi ) this.short();
  	if(this.debug) log.info('Going short');
  	}
 
-	else if ((this.trend.direction !== 'down') && (this.candle.close > this.lastLongPrice+(this.lastLongPrice * this.Min_Gain_Percent / 100) || (this.candle.close < this.lastLongPrice-(this.lastLongPrice * this.Min_Loss_Percent / 100))))
+	else if ((this.trend.direction !== 'down') || (this.candle.close > this.lastLongPrice+(this.lastLongPrice * this.Min_Gain_Percent / 100) && (this.candle.close < this.lastLongPrice-(this.lastLongPrice * this.Min_Loss_Percent / 100))))
 	{
 	this.resetTrend();
 	this.trend.direction = 'down';
