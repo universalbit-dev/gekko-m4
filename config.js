@@ -32,7 +32,8 @@ config.paperTrader = {reportInCurrency: true,simulationBalance: {asset: 1,curren
 //Adapter
 config.adapter='sqlite';
 //Api
-config.trader ={enabled:false,key:'API',secret:'SECRET'};
+config.trader ={enabled:false,exchange:'bitfinex',currency:'BTC',asset:'LTC',key:'API-KEY',secret:'API-SECRET'};
+
 config.candleWriter={enabled:false,adapter:'sqlite'};
 //BackTest
 config.backtest ={enabled:true};
