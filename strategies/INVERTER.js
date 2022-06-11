@@ -84,23 +84,23 @@ log.info('==========================================');
 resetTrend: function()
 {
 let trend = {
-	duration: 0,
-	direction: 'none',
-	longPos: 0,
-	pingPong : {gainsPercentage: this.settings.PINGPONG_GAINS_PERCENTAGE }
-	};
+duration: 0,
+direction: 'none',
+longPos: 0,
+pingPong : {gainsPercentage: this.settings.PINGPONG_GAINS_PERCENTAGE }
+};
 this.trend = trend;
 //Log Trend
 console.log(this.trend);
-	},
+},
 //Low/High backtest-period
 lowHigh: function(val,type)
 {
 let cur = this.stat.bear;
 if( type == 'bear' )
 {
-	cur = this.stat.bear;
-	if( val < cur.min ) this.stat.bear.min = val;
+cur = this.stat.bear;
+if( val < cur.min ) this.stat.bear.min = val;
 	else if( val > cur.max ) this.stat.bear.max = val;
 }
 
@@ -120,8 +120,8 @@ if( type == 'bear' )
 
 	},
 //Check
-	check: function()
-	{
+check: function()
+{
 //Indicators
 let ind = this.tulipIndicators,rsi = ind.rsi.result.result,maSlow = ind.maSlow.result.result,maFast = ind.maFast.result.result,longDEMA = ind.longDEMA.result.result,shortDEMA = ind.shortDEMA.result.result,adx = ind.ADX.result.result;
 
@@ -140,7 +140,7 @@ if((longDEMA < shortDEMA) && (maFast < maSlow))
 	let rsi_hi = this.settings.BEAR_RSI_high,rsi_low = this.settings.BEAR_RSI_low;
 // Adx
 if( adx > this.settings.ADX_high ) rsi_hi = rsi_hi + this.BEAR_MOD_high;
-	 else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BEAR_MOD_low;
+	else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BEAR_MOD_low;
 
 if( rsi > rsi_hi ) this.short();
 	else if( rsi < rsi_low ) this.long();
