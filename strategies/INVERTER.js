@@ -134,7 +134,7 @@ if((longDEMA < shortDEMA) && (maFast < maSlow))
 	else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BEAR_MOD_low;
 
 	if( rsi > rsi_hi ) this.short();
-	else if( rsi < rsi_low ) this.long(this.candle);
+	else if( rsi < rsi_low ) this.long();
 	else this.pingPong();
 	this.lowHigh( rsi, 'bear' );
 }
@@ -149,7 +149,7 @@ let rsi_hi = this.settings.BULL_RSI_high,rsi_low = this.settings.BULL_RSI_low;
 	else if( adx < this.settings.ADX_low ) rsi_low = rsi_low + this.BULL_MOD_low;
 
 	if( rsi > rsi_hi ) this.short();
-	else if( rsi < rsi_low ) this.long(this.candle);
+	else if( rsi < rsi_low ) this.long();
 	else this.pingPong();
 
 	this.lowHigh( rsi, 'bull' );
