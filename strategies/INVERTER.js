@@ -170,17 +170,15 @@ long: function()
 	this.stophigh = this.lastLongPrice+(this.lastLongPrice* this.Stop_Gain_Percent / 100);
 	this.advice('long');
 	}
-	if( this.debug )
-	{
 	this.trend.duration++;
 	log.info('Long since', this.trend.duration, 'candle(s)');
 	log.info(this.trend.direction);
-	}
-	},
+	
+},
 
 //SHORT
-	short: function()
-	{
+short: function()
+{
 	if ((this.trend.direction !== 'down') || ((this.stoplow != 0.0 ) && (this.candle.close < this.stoplow )) || ((this.stophigh != 0.0 ) && (this.candle.close > this.stophigh)) )
 	{
  	this.resetTrend();
@@ -190,22 +188,20 @@ long: function()
  	if(this.debug) log.info('Going short');
  	}
 
-	if( this.debug )
-	{
 	this.trend.duration++;
 	log.info('Short since', this.trend.duration, 'candle(s)');
 	log.info(this.trend.direction);
-	}
-	},
+	
+},
 
 //PingPong
 pingPong: function() {
 
  switch (this.trend.longPos) {
-	case (this.candle.close < (this.trend.longPos - (this.trend.longPos * (this.trend.pingPong.gainsPercentage / 14) / 100))):
+	case (this.candle.close < (this.trend.longPos - ((this.trend.longPos * (this.trend.pingPong.gainsPercentage / 14)) / 100))):
 	this.trend.longPos = this.candle.close;
 	break;
-  	case (this.candle.close < (this.trend.longPos + (this.trend.longPos * this.trend.pingPong.gainsPercentage / 100))):
+  	case (this.candle.close < (this.trend.longPos + ((this.trend.longPos * this.trend.pingPong.gainsPercentage) / 100))):
 	this.trend.longPos = false;
 	this.advice('short');
  	break;
