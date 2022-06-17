@@ -41,7 +41,7 @@
     "core-js": "^3.3.0",
     "d3": "^4.x",
     "deasync": "^0.1.21",
-    "echarts": "^5.x",
+    "echarts": "^4.2.1",
     "file-system": "^2.2.2",
     "fs-filesystem": "^2.1.2",
     "gekko-api-client": "^0.6.14",
