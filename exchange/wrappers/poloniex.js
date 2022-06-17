@@ -6,7 +6,7 @@ const marketData = require('./poloniex-markets.json');
 
 const Trader = function(config) {
   _.bindAll(this);
-	//key='';
+  //key='';
   //secret='';
   if(_.isObject(config)) {
     this.key = config.key;
