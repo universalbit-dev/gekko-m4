@@ -21,6 +21,10 @@ var config = {};
 config.debug =true;
 //Watching a Market
 config.watch = {exchange: 'bitfinex',currency: 'BTC',asset: 'LTC'};
+config.watch = {exchange: 'kraken',currency:'XBT',asset:'LTC'};
+config.watch = {exchange: 'poloniex',currency:'BTC',asset:'LTC'};
+config.watch = {exchange: 'exmo',currency:'BTC',asset:'LTC'};
+
 //Trading Advisor
 config.tradingAdvisor = {enabled:true};
 config.tradingAdvisor.candleSize=15;
@@ -28,11 +32,14 @@ config.tradingAdvisor.historySize=1;
 config.tradingAdvisor.method= 'INVERTER';
 //Plugin
 config.paperTrader ={enabled:true};
-config.paperTrader = {reportInCurrency: true,simulationBalance: {asset: 1,currency: 100},verbose: false,feeMaker: 0.5,feeTaker: 0.5,feeUsing: 'maker',slippage: 0.05};
+config.paperTrader ={reportInCurrency: true,simulationBalance: {asset: 1,currency: 100},verbose: false,feeMaker: 0.5,feeTaker: 0.5,feeUsing: 'maker',slippage: 0.05};
 //Adapter
 config.adapter='sqlite';
 //Api
-config.trader ={enabled:false,exchange:'bitfinex',currency:'BTC',asset:'LTC',key:'API-KEY',secret:'API-SECRET'};
+config.trader ={enabled:false,exchange:'bitfinex',currency:'BTC',asset:'LTC',key:'API',secret:'SECRET'};
+config.trader ={enabled:false,exchange:'kraken',currency:'XBT',asset:'LTC',key:'API',secret:'SECRET'};
+config.trader ={enabled:false,exchange:'poloniex',currency:'BTC',asset:'LTC',key:'API',secret:'SECRET'};
+config.trader ={enabled:false,exchange:'exmo',currency:'BTC',asset:'LTC',key:'API',secret:'SECRET'};
 
 config.candleWriter={enabled:false,adapter:'sqlite'};
 //BackTest
@@ -41,7 +48,7 @@ config.backtest ={enabled:true};
 config.importer={enabled:true};
 config.sqlite = {path: 'plugins/sqlite',dataDirectory: 'history',version: 0.1,journalMode: require('./web/isWindows.js') ? 'DELETE' : 'WAL',dependencies:[{module: 'sqlite3'}]};
 //Child to Parent
-//config.childToParent = {enabled: true};
+config.childToParent = {enabled: false};
 //Strategy
 config.method='INVERTER';
 config.INVERTER = {
