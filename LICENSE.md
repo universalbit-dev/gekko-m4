@@ -21,7 +21,7 @@ SOFTWARE.
 <https://en.wikipedia.org/wiki/MIT_License>
 
 
-Gekko Gordon UI
+Gordon-UI for Gekko 
 The MIT License (MIT)
 Copyright (c) 2018 Klemens Wittig
 
