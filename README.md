@@ -143,18 +143,7 @@ MODE:
 
 ##### |  Watcher  |  PaperTrade  |  BackTest  |  Realtime  |  Importer  | 
 
-*[First Run]()
-
-```
-node gekko -c config.js --ui
-```
-*[Terminal Mode with DEBUG Messages]()
-
-```
-node gekko -c config.js
-```
-
-
+[First Run]
 ##### Start Application using Pm2
 
 ```
@@ -170,6 +159,19 @@ it is also possible to [manage](https://pm2.keymetrics.io/docs/advanced/pm2-modu
 ```
 pm2 i module_name@version
 ```
+
+UI Mode:
+```
+node gekko -c config.js --ui
+```
+*[Terminal Mode with DEBUG Messages]()
+
+```
+node gekko -c config.js
+```
+
+
+
 
 ##### Crypto Icons
 
